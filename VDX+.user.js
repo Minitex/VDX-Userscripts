@@ -7,7 +7,7 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
-// @copyright   2015, Kyle Triska
+// @copyright   2017, Kyle Triska
 // @grant	GM_getResourceText
 // @resource    closingsFile https://github.com/Minitex/VDX-Userscripts/raw/master/vdxclosings.txt
 // ==/UserScript==
