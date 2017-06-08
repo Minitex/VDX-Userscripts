@@ -219,7 +219,7 @@ function modifyHtmlWithClosings(closings)
                   var libraryCell = $(this).children("td").eq(1);
                   var callNumber = $(this).children("td").eq(2);
                   var availability = $(this).children("td").eq(3);
-		  alert(libraryCell.text());
+		  alert(libraryCell);
                   //CLOSINGS
                   for (var j=0; j<closings.length; j++)
                   {
