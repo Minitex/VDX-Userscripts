@@ -259,18 +259,11 @@ function modifyHtmlWithClosings(closings)
                   for (var m=0; m<collections.length; m++)
                   {
                       var badCallNumber = badCallNumbers[m];
-		      var bethelDistance = bethelDistances[m][0];
-		      var bethelDistanceCode = bethelDistances[m][1];
 
                       if (callNumber.text().indexOf(badCallNumber) != -1)
                       {
                           libraryCell.css("background-color", "yellow");
                           libraryCell.append("- Call number alert");
-                      }
-			if (callNumber.text().indexOf(bethelDistance) != -1)
-                      {
-                          libraryCell.("background-color", "#FE2E64");
-                          libraryCell.append(bethelDistanceCode);
                       }
 
                   }
