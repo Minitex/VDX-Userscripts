@@ -15,35 +15,35 @@
 // ==/UserScript==
 
 
-var replacements =	[
-					["ANK", "Anoka County Library"],
-					["ALV", "Arrowhead Library System"],
-                    ["BTA", "CLIC - Bethel University"],
-					["CCE", "Carver County Library"],
-					["DCB", "Dakota County Library"],
-          			["DUD", "Duluth Public Library"],
-					["ETC", "East Central Regional Library"],
-					["GRR", "Great River Regional Library"],
-					["HCO", "Hennepin County Library"],
-					["KRL", "Kitchigami Regional Library"],
-					["LAL/NRG", "Lake Agassiz Regional & Northwest Regional"],
-					["CRM", "Pioneerland Library Systems"],
-                    ["MHA", "Hamline University"],
-					["MLM", "Plum Creek Library System"],
-                    ["MNC", "Concordia University St. Paul"],
-                    ["MNE", "St. Catherine University"],
-                    ["MNT", "University of St. Thomas"],
-                    ["NOW", "University of Northwestern-St. Paul"],
-					["RCL", "Ramsey County Library"],
-					["ROC", "Rochester Public Library"],
-					["SPP", "Saint Paul Public Library"],
-					["SSH", "Scott County Library System"],
-					["S#L", "Southeastern Libraries Cooperating (SELCO)"],
-					["TDS", "Traverse des Sioux Library System"],
-					["MNU", "University of Minnesota - All Campuses"],
-					["XOL", "Viking Library System"],
-					["WLM", "Washington County Library"]
-					];
+var replacements = 	[
+			["ANK", "Anoka County Library"],
+			["ALV", "Arrowhead Library System"],
+			["BTA", "CLIC - Bethel University"],
+			["CCE", "Carver County Library"],
+			["DCB", "Dakota County Library"],
+			["DUD", "Duluth Public Library"],
+			["ETC", "East Central Regional Library"],
+			["GRR", "Great River Regional Library"],
+			["HCO", "Hennepin County Library"],
+			["KRL", "Kitchigami Regional Library"],
+			["LAL/NRG", "Lake Agassiz Regional & Northwest Regional"],
+			["CRM", "Pioneerland Library Systems"],
+			["MHA", "Hamline University"],
+			["MLM", "Plum Creek Library System"],
+			["MNC", "Concordia University St. Paul"],
+			["MNE", "St. Catherine University"],
+			["MNT", "University of St. Thomas"],
+			["NOW", "University of Northwestern-St. Paul"],
+			["RCL", "Ramsey County Library"],
+			["ROC", "Rochester Public Library"],
+			["SPP", "Saint Paul Public Library"],
+			["SSH", "Scott County Library System"],
+			["S#L", "Southeastern Libraries Cooperating (SELCO)"],
+			["TDS", "Traverse des Sioux Library System"],
+			["MNU", "University of Minnesota - All Campuses"],
+			["XOL", "Viking Library System"],
+			["WLM", "Washington County Library"]
+			];
 
 $(".search-targets:contains(',')").each(function()
                                          {
@@ -54,10 +54,10 @@ $(".search-targets:contains(',')").each(function()
 $( ".search-targets a" ).each(function( index ) {
 	for (var i=0; i<replacements.length; i++)
 	{
-      var item = replacements[i];
-      var code = item[0];
-      var name = item[1];
-      if ($(this).text().indexOf(name) != -1)
+	      var item = replacements[i];
+	      var code = item[0];
+	      var name = item[1];
+	      if ($(this).text().indexOf(name) != -1)
       {
           $(this).text(code);
       }
