@@ -45,48 +45,50 @@ function parseClosingsToArray(txt)
 }
 
 var collections = 	[
-    ["Chatfield Music Lending Library", "DOES NOT LOAN - CODE 6"],
-    ["St. Cloud Public Library", "CLOSED INDEFINITELY - CODE 6"],
-    ["Bookmobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
-    ["Mobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
-    ["Floating", "FLOATING DON'T LOAN - CODE 6"],
-    ["Church Library", "- CHURCH LIBRARY DOESN'T LOAN - CODE 6"],
-    [" H S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    [" M S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["High School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["HIGH SCHOOL", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["Schools", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["Elementary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["Secondary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["Community School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["Middle School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["Primary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["ALV - Hibbing Public Library", "Closed indefinitely - CODE 6"],
-    ["Elysian Public Library", "- DOESN'T LOAN - 6"],
-    ["Minneapolis Central", "IGNORE THIS LOCATION"]
-];
+			["Chatfield Music Lending Library", "DOES NOT LOAN - CODE 6"],
+			["St. Cloud Public Library", "CLOSED INDEFINITELY - CODE 6"],
+			["Bookmobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
+			["Mobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
+			["Floating", "FLOATING DON'T LOAN - CODE 6"],
+			["Church Library", "- CHURCH LIBRARY DOESN'T LOAN - CODE 6"],
+			[" H S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			[" M S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["High School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["HIGH SCHOOL", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["Schools", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["Elementary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["Secondary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["Community School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["Middle School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["Primary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
+			["ALV - Hibbing Public Library", "Closed indefinitely - CODE 6"],
+			["Elysian Public Library", "- DOESN'T LOAN - 6"],
+			["Minneapolis Central", "IGNORE THIS LOCATION"]
+			];
 
-var dvdLocs	=	[
-    ["ALV - Babbitt", "- DOESN'T LOAN DVDS - 2"],
-    ["ALV - Baudette", "- DOESN'T LOAN DVDS - 2"],
-    ["ALV - Marble Public", "- DOESN'T LOAN DVDS - 2"],
-    ["ALV - Moose Lake", "- DOESN'T LOAN DVDS - 2"],
-    ["ALV - Virginia", "- NO FICTION DVDS - 2"],
-    ["ALV - Ely", "- DOESN'T LOAN DVDS - 2"],
+var dvdLocs = 	[
+		["ALV - Babbitt", "- DOESN'T LOAN DVDS - 2"],
+		["ALV - Baudette", "- DOESN'T LOAN DVDS - 2"],
+		["ALV - Marble Public", "- DOESN'T LOAN DVDS - 2"],
+		["ALV - Moose Lake", "- DOESN'T LOAN DVDS - 2"],
+		["ALV - Virginia", "- NO FICTION DVDS - 2"],
+		["ALV - Ely", "- DOESN'T LOAN DVDS - 2"],
 
-    ["CRM - Canby", "- DOESN'T LOAN DVDS - 2"],
-    ["CRM - Dawson", "- DOESN'T LOAN DVDS - 2"],
-    ["CRM - Graceville", "- DOESN'T LOAN DVDS - 2"],
-    ["CRM - Madison", "- DOESN'T LOAN DVDS - 2"],
+		["CRM - Canby", "- DOESN'T LOAN DVDS - 2"],
+		["CRM - Dawson", "- DOESN'T LOAN DVDS - 2"],
+		["CRM - Graceville", "- DOESN'T LOAN DVDS - 2"],
+		["CRM - Madison", "- DOESN'T LOAN DVDS - 2"],
 
-    ["MLM - Edgerton", "- DOESN'T LOAN DVDS - 2"],
-    ["MLM - Redwood Falls", "- DOESN'T LOAN DVDS - 2"],
-    ["MLM - Wabasso", "- DOESN'T LOAN DVDS - 2"],
+		["MLM - Edgerton", "- DOESN'T LOAN DVDS - 2"],
+		["MLM - Redwood Falls", "- DOESN'T LOAN DVDS - 2"],
+		["MLM - Wabasso", "- DOESN'T LOAN DVDS - 2"],
 
-    ["S#L - Albert Lea", "- DOESN'T LOAN DVDS - 2"],
+		["MNT", "- DOESN'T LOAN DVDS - 2"],
+	
+		["S#L - Albert Lea", "- DOESN'T LOAN DVDS - 2"],
 
-    ["SSH - Law Library", "- DOESN'T LOAN DVDS - 2"]
-];
+		["SSH - Law Library", "- DOESN'T LOAN DVDS - 2"]
+		];
 
 var dvdSerLocs	=	[
     ["S#L - Cannon Falls", "- DOESN'T LOAN DVD SERIES - 2"],
@@ -300,6 +302,5 @@ function modifyHtmlWithClosings(closings)
                           libraryCell.append(availabilityBadCode);
                       }
                   }
-alert(libraryCell);
               });
 }
