@@ -8,7 +8,7 @@
 // @version     1.9.1
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.js
-// @updateURL   https://openuserjs.org/install/tris0020/VDX_Search_Changes.user.js
+// @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/vdx-search-changes.user.js
 // @author      Kyle Triska
 // @copyright   2015, Kyle Triska
 // @grant       GM_addStyle
