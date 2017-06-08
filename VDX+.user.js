@@ -8,15 +8,15 @@
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
 // @copyright   2015, Kyle Triska
-// @grant		GM_getResourceText
+// @grant	GM_getResourceText
 // @resource    closingsFile file://H:\DocDel\Kyle\vdxclosings.txt
 // ==/UserScript==
 
 function handleClosings() {
-var closingsSource = GM_getResourceText("closingsFile");
-if (closingsSource === null) {alert("Cannot find file on H drive! Closings will not display! Tell supervisor!");}
-var array = parseClosingsToArray(closingsSource);
-modifyHtmlWithClosings(array);
+	var closingsSource = GM_getResourceText("closingsFile");
+	if (closingsSource === null) {alert("Cannot find file on H drive! Closings will not display! Tell supervisor!");}
+		var array = parseClosingsToArray(closingsSource);
+		modifyHtmlWithClosings(array);
 }
 
 function parseClosingsToArray(txt)
@@ -109,15 +109,15 @@ var availabilityBad =   [
 
 
 var codes = [
-    ["Arrowhead Library System", "<b>Cloquet</b> does not circulate anything published in the last 6 months.","24"],
-    ["Arrowhead Library System", "Does not lend AV Materials by Bob Dylan.","2"],
+	["Arrowhead Library System", "<b>Cloquet</b> does not circulate anything published in the last 6 months.","24"],
+	["Arrowhead Library System", "Does not lend AV Materials by Bob Dylan.","2"],
 
-    ["Anoka County Library", "Check 2015-2016 DVDs in catalog for 'Rental' in Call Number","24"],
-    ["Anoka County Library", "Does not lend if another copy is out for ILL","1"],
+	["Anoka County Library", "Check 2015-2016 DVDs in catalog for 'Rental' in Call Number","24"],
+	["Anoka County Library", "Does not lend if another copy is out for ILL","1"],
 
 	["CLIC - Bethel", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
 	["CLIC - Bethel", "<b>BTA</b> - Items from the <b>Z Room</b> do not circulate.","2"],
-    ["CLIC - Bethel", "<b>MNK</b> - Does not lend Children's books.","2"],
+	["CLIC - Bethel", "<b>MNK</b> - Does not lend Children's books.","2"],
 	["CLIC - Bethel", "<b>BTA and MNK</b> - Do not lend AV items.","2"],
 
 	["CLIC - Concordia", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
@@ -125,17 +125,17 @@ var codes = [
 
 	["CLIC - Hamline", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
 	["CLIC - Hamline", "Items from Multi-Volume sets do not circulate.","2"],
-    ["CLIC - Hamline", "Items from the <b>2012-2013 MN Continuing Education Collection</b> do not circulate.","2"],
-    ["CLIC - Hamline", "Childrens Collection does not circulate.","2"],
+	["CLIC - Hamline", "Items from the <b>2012-2013 MN Continuing Education Collection</b> do not circulate.","2"],
+	["CLIC - Hamline", "Childrens Collection does not circulate.","2"],
 	["CLIC - Hamline", "Loans CDs if 'Media' is not in the location code (but will not lend other AV at all).","2"],
 	["CLIC - Hamline", "Items owned at <b>MHL</b> should be added to the ROTA as MHA.", " "],
 
 	["CLIC - St. Catherine", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
 	["CLIC - St. Catherine", "<b>SMC</b> - Does not lend 2017 items.","24"],
 	["CLIC - St. Catherine", "<b>SMC</b> - Does not lend AV items.","2"],
-    ["CLIC - St. Catherine", "<b>MNE</b> - <b>'Browsing Collection'</b> will not circulate","2"],
-    ["CLIC - St. Catherine", "<b>MNE</b> - <b>'Special Collection'</b> will not circulate","2"],
-    ["CLIC - St. Catherine", "<b>MNE</b> - Loans CDs if 'Media' is not in the location code (but will not lend other AV at all).","2"],
+	["CLIC - St. Catherine", "<b>MNE</b> - <b>'Browsing Collection'</b> will not circulate","2"],
+	["CLIC - St. Catherine", "<b>MNE</b> - <b>'Special Collection'</b> will not circulate","2"],
+	["CLIC - St. Catherine", "<b>MNE</b> - Loans CDs if 'Media' is not in the location code (but will not lend other AV at all).","2"],
 
 	["CLIC - Northwestern", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
 	["CLIC - Northwestern", "Loans any AV if 'Media' is not in the location code.","2"],
@@ -143,37 +143,37 @@ var codes = [
 	["CLIC - St. Thomas", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
 	["CLIC - St. Thomas", "<b>MNT and TL#</b> - Do not lend AV items.","2"],
 
-    ["Pioneerland Library Systems", "Ortonville will not loan new (2015-2016) DVDs","24"],
-    ["Pioneerland Library Systems", "Will not circulate audio series 'The story of the world' series by Susan Wise Bauer","2"],
+	["Pioneerland Library Systems", "Ortonville will not loan new (2015-2016) DVDs","24"],
+	["Pioneerland Library Systems", "Will not circulate audio series 'The story of the world' series by Susan Wise Bauer","2"],
 
-    ["Dakota County Library", "Does not lend recent DVDs. (In Catalog as 'DVDs, Rental')","24"],
-    ["Dakota County Library", "Videocassettes do not circulate.","2"],
-    ["Dakota County Library", "Video Games do not circulate.","2"],
+	["Dakota County Library", "Does not lend recent DVDs. (In Catalog as 'DVDs, Rental')","24"],
+	["Dakota County Library", "Videocassettes do not circulate.","2"],
+	["Dakota County Library", "Video Games do not circulate.","2"],
 
-    ["Hennepin County Library", "Children's board books do not circulate.","2"],
+	["Hennepin County Library", "Children's board books do not circulate.","2"],
 
-    ["Kitchigami Regional Library", "Does not loan 2015-2016 items.","24"],
+	["Kitchigami Regional Library", "Does not loan 2015-2016 items.","24"],
 
-    ["Lake Agassiz Regional Library and Northwest Regional Library", "Does not lend 2015-2016 items.","24"],
+	["Lake Agassiz Regional Library and Northwest Regional Library", "Does not lend 2015-2016 items.","24"],
 
-    ["Plum Creek Library System", "<a href=\x22http://opac.plumcreeklibrary.net/cgi-bin/koha/opac-main.pl\x22 target=\x22_blank\x22>Please check catalog for items with '0' availability.</a>"," "],
-    ["Plum Creek Library System", "Does not loan 2015-2016 items (has 'NEW' in the call number).","24"],
+	["Plum Creek Library System", "<a href=\x22http://opac.plumcreeklibrary.net/cgi-bin/koha/opac-main.pl\x22 target=\x22_blank\x22>Please check catalog for items with '0' availability.</a>"," "],
+	["Plum Creek Library System", "Does not loan 2015-2016 items (has 'NEW' in the call number).","24"],
 
-    ["Ramsey County Library", "Professional collection does not circulate.","2"],
-    ["Ramsey County Library", "Video Games do not circulate.","2"],
+	["Ramsey County Library", "Professional collection does not circulate.","2"],
+	["Ramsey County Library", "Video Games do not circulate.","2"],
 
-    ["Scott County Library System", "<b>Heritage Room</b> items do not circulate.","2"],
+	["Scott County Library System", "<b>Heritage Room</b> items do not circulate.","2"],
 
-    ["Southeastern Libraries Cooperating (SELCO)", "<a href=\x22http://selco.ent.sirsi.net/client/default\x22 target=\x22_blank\x22>Remember to check S#L catalog before sending any requests to their location!</a>"," "],
-    ["Southeastern Libraries Cooperating (SELCO)", "<b>Local Request Only</b>","2"],
-    ["Southeastern Libraries Cooperating (SELCO)", "<b>CBBMLL (Chatfield Brass Band Music Lending Library)</b> does not circulate.","2"],
-    ["Southeastern Libraries Cooperating (SELCO)", "Notify a supervisor if you see a request going to <b>CBBMLL</b>.","2"],
-    ["Southeastern Libraries Cooperating (SELCO)", "Cannon Falls, Pine Island, and Zumbrota will not loan DVD series.","2"],
+	["Southeastern Libraries Cooperating (SELCO)", "<a href=\x22http://selco.ent.sirsi.net/client/default\x22 target=\x22_blank\x22>Remember to check S#L catalog before sending any requests to their location!</a>"," "],
+	["Southeastern Libraries Cooperating (SELCO)", "<b>Local Request Only</b>","2"],
+	["Southeastern Libraries Cooperating (SELCO)", "<b>CBBMLL (Chatfield Brass Band Music Lending Library)</b> does not circulate.","2"],
+	["Southeastern Libraries Cooperating (SELCO)", "Notify a supervisor if you see a request going to <b>CBBMLL</b>.","2"],
+	["Southeastern Libraries Cooperating (SELCO)", "Cannon Falls, Pine Island, and Zumbrota will not loan DVD series.","2"],
 
-    ["Washington County Library", "Does not lend fiction DVDs.","2"],
-    ["Washington County Library", "Does not lend unless there is more than one copy available.","2"],
+	["Washington County Library", "Does not lend fiction DVDs.","2"],
+	["Washington County Library", "Does not lend unless there is more than one copy available.","2"],
 
-    ["placeholder","placeholder","placeholder"]
+	["placeholder","placeholder","placeholder"]
 ];
 
 
