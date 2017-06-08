@@ -74,6 +74,8 @@ var dvdLocs = 	[
 		["ALV - Virginia", "- NO FICTION DVDS - 2"],
 		["ALV - Ely", "- DOESN'T LOAN DVDS - 2"],
 
+		["BTA", "- DOESN'T LOAN DVDS - 2"],
+	
 		["CRM - Canby", "- DOESN'T LOAN DVDS - 2"],
 		["CRM - Dawson", "- DOESN'T LOAN DVDS - 2"],
 		["CRM - Graceville", "- DOESN'T LOAN DVDS - 2"],
@@ -83,9 +85,15 @@ var dvdLocs = 	[
 		["MLM - Redwood Falls", "- DOESN'T LOAN DVDS - 2"],
 		["MLM - Wabasso", "- DOESN'T LOAN DVDS - 2"],
 
+		["MNK", "- DOESN'T LOAN DVDS - 2"],
+	
 		["MNT", "- DOESN'T LOAN DVDS - 2"],
 	
+		["TL#", "- DOESN'T LOAN DVDS - 2"],
+	
 		["S#L - Albert Lea", "- DOESN'T LOAN DVDS - 2"],
+	
+		["SMC", "- DOESN'T LOAN DVDS - 2"],
 
 		["SSH - Law Library", "- DOESN'T LOAN DVDS - 2"]
 		];
@@ -108,7 +116,7 @@ var codes = [
 	["Arrowhead Library System", "<b>Cloquet</b> does not circulate anything published in the last 6 months.","24"],
 	["Arrowhead Library System", "Does not lend AV Materials by Bob Dylan.","2"],
 
-	["Anoka County Library", "Check 2015-2016 DVDs in catalog for 'Rental' in Call Number","24"],
+	["Anoka County Library", "Check 2016-2017 DVDs in catalog for 'Rental' in Call Number","24"],
 	["Anoka County Library", "Does not lend if another copy is out for ILL","1"],
 
 	["CLIC - Bethel", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
