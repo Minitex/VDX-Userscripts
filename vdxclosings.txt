@@ -32,3 +32,4 @@
 [" School", "- K12 SCHOOLS DON'T LOAN - CODE 6"]
 ["MLM - Cedar Mt. Franklin", "- K12 SCHOOLS DON'T LOAN - CODE 6"]
 ["S#L - Crossroads College", "- DOESN'T LOAN - CODE 6"]
+["Bethel Seminary San Diego Library", "- DOESN'T LOAN - 6"]
