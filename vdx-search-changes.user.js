@@ -4,7 +4,7 @@
 // @description Changes the location filters at the top of the search results
 // @include     https://www.mnlinkgateway.org/vdx/zengine
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchResults*
-// @include		https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchMoveToStartOfResultSet*
+// @include	https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchMoveToStartOfResultSet*
 // @version     1.9.1
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.js
