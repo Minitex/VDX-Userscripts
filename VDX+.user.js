@@ -270,7 +270,7 @@ function modifyHtmlWithClosings(closings)
 			if (callNumber.text().indexOf(bethelDistance) != -1)
                       {
                           libraryCell.("background-color", "#FE2E64");
-                          libraryCell.append(collectionCode);
+                          libraryCell.append(bethelDistanceCode);
                       }
 
                   }
