@@ -9,7 +9,7 @@
 // @author      Kyle Triska
 // @copyright   2015, Kyle Triska
 // @grant	GM_getResourceText
-// @resource    closingsFile file://H:\DocDel\Kyle\vdxclosings.txt
+// @resource    closingsFile https://github.com/Minitex/VDX-Userscripts/raw/master/vdxclosings.txt
 // ==/UserScript==
 
 function handleClosings() {
