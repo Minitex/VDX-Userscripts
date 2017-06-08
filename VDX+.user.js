@@ -5,7 +5,7 @@
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
 // @version     2.6.1
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @updateURL   https://openuserjs.org/meta/tris0020/VDX+.meta.js
+// @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
 // @copyright   2015, Kyle Triska
 // @grant		GM_getResourceText
