@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.6.1
+// @version     2.6.3
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
@@ -54,7 +54,7 @@ var collections = 	[
     ["BENY", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
     ["BEPHIL", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
     ["BEWASH", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
-    ["BSANDIEGO", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
+    ["Bethel Seminary San Diego", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
     ["Church Library", "- CHURCH LIBRARY DOESN'T LOAN - CODE 6"],
     [" H S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
     [" M S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
