@@ -54,7 +54,7 @@ var collections = 	[
     ["BENY", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
     ["BEPHIL", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
     ["BEWASH", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
-    ["Bethel Seminary San Diego", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
+
     ["Church Library", "- CHURCH LIBRARY DOESN'T LOAN - CODE 6"],
     [" H S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
     [" M S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
@@ -71,6 +71,9 @@ var collections = 	[
     ["Minneapolis Central", "IGNORE THIS LOCATION"]
 ];
 
+var bethelDistance = [
+    ["Bethel Seminary San Diego", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
+];
 
 var dvdLocs	=	[
     ["ALV - Babbitt", "- DOESN'T LOAN DVDS - 2"],
@@ -256,11 +259,18 @@ function modifyHtmlWithClosings(closings)
                   for (var m=0; m<collections.length; m++)
                   {
                       var badCallNumber = badCallNumbers[m];
+		      var bethelDistance = bethelDistances[m];
+		      var bethelDistanceCode = bethelDistances[m];
 
                       if (callNumber.text().indexOf(badCallNumber) != -1)
                       {
                           libraryCell.css("background-color", "yellow");
                           libraryCell.append("- Call number alert");
+                      }
+			if (callNumber.text().indexOf(bethelDistance) != -1)
+                      {
+                          libraryCell.("background-color", "#FE2E64");
+                          libraryCell.append(collectionCode);
                       }
 
                   }
