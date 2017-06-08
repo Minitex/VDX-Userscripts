@@ -71,7 +71,7 @@ var collections = 	[
     ["Minneapolis Central", "IGNORE THIS LOCATION"]
 ];
 
-var bethelDistance = [
+var bethelDistances = [
     ["Bethel Seminary San Diego", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
 ];
 
@@ -259,8 +259,8 @@ function modifyHtmlWithClosings(closings)
                   for (var m=0; m<collections.length; m++)
                   {
                       var badCallNumber = badCallNumbers[m];
-		      var bethelDistance = bethelDistances[m];
-		      var bethelDistanceCode = bethelDistances[m];
+		      var bethelDistance = bethelDistances[m][0];
+		      var bethelDistanceCode = bethelDistances[m][1];
 
                       if (callNumber.text().indexOf(badCallNumber) != -1)
                       {
