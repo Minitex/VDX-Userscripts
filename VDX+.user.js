@@ -50,11 +50,6 @@ var collections = 	[
     ["Bookmobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
     ["Mobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
     ["Floating", "FLOATING DON'T LOAN - CODE 6"],
-    ["BENE", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
-    ["BENY", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
-    ["BEPHIL", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
-    ["BEWASH", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
-
     ["Church Library", "- CHURCH LIBRARY DOESN'T LOAN - CODE 6"],
     [" H S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
     [" M S", "K12 SCHOOLS DON'T LOAN - CODE 6"],
@@ -69,10 +64,6 @@ var collections = 	[
     ["ALV - Hibbing Public Library", "Closed indefinitely - CODE 6"],
     ["Elysian Public Library", "- DOESN'T LOAN - 6"],
     ["Minneapolis Central", "IGNORE THIS LOCATION"]
-];
-
-var bethelDistances = [
-    ["Bethel Seminary San Diego", "DISTANCE LOCATIONS DON'T LOAN - CODE 6"],
 ];
 
 var dvdLocs	=	[
