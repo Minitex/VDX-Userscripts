@@ -3,12 +3,12 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.6.3
+// @version     2.6.4
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
 // @copyright   2017, Kyle Triska
-// @grant	GM_getResourceText
+// @grant 	GM_getResourceText
 // @resource    closingsFile https://github.com/Minitex/VDX-Userscripts/raw/master/vdxclosings.txt
 // ==/UserScript==
 
@@ -101,6 +101,14 @@ var dvdSerLocs	=	[
     ["S#L - Cannon Falls", "- DOESN'T LOAN DVD SERIES - 2"],
     ["S#L - Pine Island", "- DOESN'T LOAN DVD SERIES - 2"],
     ["S#L - Zumbrota", "- DOESN'T LOAN DVD SERIES - 2"]
+];
+
+var clicCDS = [
+	["BTA", "- DOESN'T LOAN CDS - 2"],
+	["MNK", "- DOESN'T LOAN CDS - 2"],
+	["MNT", "- DOESN'T LOAN CDS - 2"],
+	["TL#", "- DOESN'T LOAN CDS - 2"],
+	["SMC", "- DOESN'T LOAN CDS - 2"],
 ];
 
 var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special"];
@@ -296,6 +304,19 @@ function modifyHtmlWithClosings(closings)
 
                   }
 
+				//CLIC
+                  for (var g=0; g<clicCDS.length; g++)
+                  {
+                      var clicCD = clicCDS[g][0];
+                      var clicCDCode = clicCDS[g][1];
+
+                      if (libraryCell.text().indexOf(clicCD) != -1 && (format == "Music CD" || format == "Book on CD"))
+                      {
+                          libraryCell.css("background-color", "#FE2E64");
+                          libraryCell.append(clicCDCode);
+                      }
+
+                  }
 
                   for (var p=0; p<availabilityBad.length; p++)
                   {
