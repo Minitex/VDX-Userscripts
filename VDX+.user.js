@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.6.4
+// @version     2.6.5
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
@@ -111,7 +111,7 @@ var clicCDS = [
 	["SMC", "- DOESN'T LOAN CDS - 2"],
 ];
 
-var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special"];
+var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special"];
 var availabilityBad =   [
                         ["STORYTIME", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
                         ["ON DISPLAY", "- DISPLAY ITEMS DON'T LOAN - CODE 2"],
