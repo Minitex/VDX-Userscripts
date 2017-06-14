@@ -14,6 +14,7 @@
 
 function handleClosings() {
 	var closingsSource = GM_getResourceText("closingsFile");
+		if (closingsSource === null) {alert("Cannot find file on H drive! Closings will not display! Tell supervisor!");}
 		var array = parseClosingsToArray(closingsSource);
 		modifyHtmlWithClosings(array);
 }
