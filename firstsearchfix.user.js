@@ -2,7 +2,7 @@
 // @name        FirstSearchFix
 // @namespace   FirstSearchFix
 // @description Changes the libraries availability table in FirstSearch
-// @include     http://firstsearch.org/WebZ/*
+// @include     http://firstsearch.org/WebZ/FSFETCH?fetchtype=holdingsall*
 // @version     1
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/firstsearchfix.user.js
