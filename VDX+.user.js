@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.6.13
+// @version     2.6.14
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -120,6 +120,11 @@ var availabilityBad =   [
     ["WALDORF", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
     ["MNARCHIVES", "- MNARCHIVES COLLECTION DOESN'T LOAN - CODE 2"],
     ["Reference", "- REFERENCE COLLECTION DOESN'T LOAN - CODE 2"],
+    ["Archives", "- Archives COLLECTION DOESN'T LOAN - CODE 2"],
+    ["Ade Bethune", "- ADE BETHUNE COLLECTION DOESN'T LOAN - CODE 2"],
+    ["McHugh", "- McHugh COLLECTION DOESN'T LOAN - CODE 2"],
+    ["Mitsch", "- Mitsch COLLECTION DOESN'T LOAN - CODE 2"],
+    ["Muellerleile", "- Muellerleile COLLECTION DOESN'T LOAN - CODE 2"],
     ["Sawyer", "- SAWYER COLLECTION DOESN'T LOAN - CODE 2"],
     ["Slade", "- SLADE COLLECTION DOESN'T LOAN - CODE 2"]
 ];
