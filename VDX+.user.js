@@ -113,7 +113,7 @@ var clicCDS = [
 	["SMC", "- DOESN'T LOAN CDS - 2"],
 ];
 
-var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special"];
+var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special", "_Off-site"];
 var availabilityBad =   [
     ["STORYTIME", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
     ["ON DISPLAY", "- DISPLAY ITEMS DON'T LOAN - CODE 2"],
@@ -173,6 +173,7 @@ var codes = [
 	["Dakota County Library", "Video Games do not circulate.","2"],
 
 	["Hennepin County Library", "Children's board books do not circulate.","2"],
+    ["Hennepin County Library", "Off-site does not loan.","6"],
 
 	["Kitchigami Regional Library", "Does not loan 2016-2017 items.","24"],
 
