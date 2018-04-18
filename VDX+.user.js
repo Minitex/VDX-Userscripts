@@ -8,7 +8,7 @@
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
-// @copyright   2017, Kyle Triska
+// @copyright   2018, Kyle Triska
 // @grant 	GM_getResourceText
 // @resource    closingsFile file://H:\DocDel\Kyle\vdxclosings.txt
 // ==/UserScript==
