@@ -346,7 +346,7 @@ function modifyHtmlWithClosings(closings)
             var videoGame = videoGames[b][0];
             var videoGameCode = videoGames[b][1];
 
-            if (libraryCell.text().indexOf(videoGame) != -1 && (format == "CD-ROM" && (edition.includes("Xbox") || edition.includes("PlayStation") || edition.includes("Wii") || edition.includes("Nintendo") || edition.includes("PS"))))
+            if (libraryCell.text().indexOf(videoGame) != -1 && (format == "CD-ROM" && (edition.includes("Xbox") || edition.includes("PlayStation") || edition.includes("Wii") || edition.includes("Switch") || edition.includes("PS"))))
             {
                 libraryCell.css("background-color", "#FE2E64");
                 libraryCell.append(videoGameCode);
