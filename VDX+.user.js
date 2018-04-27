@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.7.0
+// @version     2.7.1
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -117,9 +117,9 @@ var videoGames = [
     ["", "- VIDEO GAMES DO NOT LEND - 2"],
 ];
 
+
 var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special", "_Off-site"];
 
-var videoGameSystems = ["PlayStation", "Xbox"];
 
 var availabilityBad =   [
     ["STORYTIME", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
@@ -366,5 +366,14 @@ function modifyHtmlWithClosings(closings)
                 libraryCell.append(availabilityBadCode);
             }
         }
+
+
+            if (libraryCell.text().startsWith("WLM") && (callNumber.text().startsWith("DVD FIC") || callNumber.text().startsWith("DVD FICTION")))
+            {
+                libraryCell.css("background-color", "yellow");
+                libraryCell.append(" - DOESN'T LEND FICTION DVDS - 2");
+            }
+
+
     });
 }
