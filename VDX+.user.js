@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.7.6
+// @version     2.7.7
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -201,7 +201,6 @@ var codes = [
     ["Southeastern Libraries Cooperating (SELCO)", "Notify a supervisor if you see a request going to <b>CBBMLL</b>.","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Cannon Falls, Pine Island, and Zumbrota will not loan DVD series.","2"],
 
-    ["Washington County Library", "Does not lend fiction DVDs.","2"],
     ["Washington County Library", "Does not lend unless there is more than one copy available.","2"],
 
     ["placeholder","placeholder","placeholder"]
