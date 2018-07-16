@@ -365,14 +365,5 @@ function modifyHtmlWithClosings(closings)
                 libraryCell.append(availabilityBadCode);
             }
         }
-
-
-            if (libraryCell.text().startsWith("WLM") && (callNumber.text().startsWith("DVD FIC") || callNumber.text().startsWith("DVD FICTION")))
-            {
-                libraryCell.css("background-color", "yellow");
-                libraryCell.append(" - DOESN'T LEND FICTION DVDS - 2");
-            }
-
-
     });
 }
