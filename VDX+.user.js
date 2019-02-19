@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.7.9
+// @version     2.8
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -142,7 +142,7 @@ var codes = [
     ["Arrowhead Library System", "<b>Cloquet</b> does not circulate anything published in the last 6 months.","24"],
     ["Arrowhead Library System", "Does not lend AV Materials by Bob Dylan.","2"],
 
-    ["Anoka County Library", "Check 2018-2019 DVDs in catalog for 'Rental' in Call Number","24"],
+    ["Anoka County Library", "Check current year and previous year DVDs in catalog for 'Rental' in Call Number","24"],
     ["Anoka County Library", "Does not lend if another copy is out for ILL","1"],
 
     ["CLIC - Bethel", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
@@ -173,7 +173,7 @@ var codes = [
     ["CLIC - St. Thomas", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
     ["CLIC - St. Thomas", "<b>MNT and TL#</b> - Do not lend AV items.","2"],
 
-    ["Pioneerland Library Systems", "Ortonville will not loan new (2018-2019) DVDs","24"],
+    ["Pioneerland Library Systems", "Ortonville will not loan new (current year and previous year) DVDs","24"],
     ["Pioneerland Library Systems", "Will not circulate audio series 'The story of the world' series by Susan Wise Bauer","2"],
 
     ["Dakota County Library", "Does not lend recent DVDs. (In Catalog as 'DVDs, Rental')","24"],
@@ -183,12 +183,12 @@ var codes = [
     ["Hennepin County Library", "Children's board books do not circulate.","2"],
     ["Hennepin County Library", "Off-site does not loan.","6"],
 
-    ["Kitchigami Regional Library", "Does not loan 2018-2019 items.","24"],
+    ["Kitchigami Regional Library", "Does not loan current year and previous year items.","24"],
 
-    ["Lake Agassiz Regional Library and Northwest Regional Library", "Does not lend 2018-2019 items.","24"],
+    ["Lake Agassiz Regional Library and Northwest Regional Library", "Does not lend current year and previous year items.","24"],
 
     ["Plum Creek Library System", "<a href=\x22http://opac.plumcreeklibrary.net/cgi-bin/koha/opac-main.pl\x22 target=\x22_blank\x22>Please check catalog for items with '0' availability.</a>"," "],
-    ["Plum Creek Library System", "Does not loan 2018-2019 items (has 'NEW' in the call number).","24"],
+    ["Plum Creek Library System", "Does not loan current year and previous year items (has 'NEW' in the call number).","24"],
 
     ["Ramsey County Library", "Professional collection does not circulate.","2"],
     ["Ramsey County Library", "Video Games do not circulate.","2"],
