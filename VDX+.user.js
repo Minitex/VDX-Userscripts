@@ -3,12 +3,12 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.8
+// @version     2.8.1
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
-// @copyright   2018, Kyle Triska
+// @copyright   2019, Kyle Triska
 // @grant 	GM_getResourceText
 // @resource    closingsFile file://H:\Resource Sharing\Kyle\vdxclosings.txt
 // ==/UserScript==
@@ -134,7 +134,8 @@ var availabilityBad =   [
     ["Muellerleile", "- Muellerleile COLLECTION DOESN'T LOAN - CODE 2"],
     ["Sawyer", "- SAWYER COLLECTION DOESN'T LOAN - CODE 2"],
     ["Slade", "- SLADE COLLECTION DOESN'T LOAN - CODE 2"],
-    ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"]
+    ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
+    ["Bethel Seminary San Diego Library", "- SAN DIEGO LIBRARY DOESN'T LOAN - CODE 2"]
 ];
 
 
