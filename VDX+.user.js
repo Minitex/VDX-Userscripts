@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.8.2
+// @version     2.8.3
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -121,7 +121,7 @@ var videoGames = [
 var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special", "_Off-site"];
 
 
-var availabilityBad =   [
+var availabilityBad = [
     ["STORYTIME", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
     ["ON DISPLAY", "- DISPLAY ITEMS DON'T LOAN - CODE 2"],
     ["WALDORF", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
@@ -135,7 +135,8 @@ var availabilityBad =   [
     ["Sawyer", "- SAWYER COLLECTION DOESN'T LOAN - CODE 2"],
     ["Slade", "- SLADE COLLECTION DOESN'T LOAN - CODE 2"],
     ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
-    ["Bethel Seminary San Diego Library", "- SAN DIEGO LIBRARY DOESN'T LOAN - CODE 6"]
+    ["Bethel Seminary San Diego Library", "- SAN DIEGO LIBRARY DOESN'T LOAN - CODE 6"],
+    ["Vault", "- IF BTA VAULT ITEMS DO NOT LOAN - 6"],
 ];
 
 
