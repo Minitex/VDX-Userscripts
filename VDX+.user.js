@@ -136,7 +136,7 @@ var availabilityBad = [
     ["Slade", "- SLADE COLLECTION DOESN'T LOAN - CODE 2"],
     ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
     ["Bethel Seminary San Diego Library", "- SAN DIEGO LIBRARY DOESN'T LOAN - CODE 6"],
-    ["Vault", "- IF BTA VAULT ITEMS DO NOT LOAN - 6"],
+    ["Vault", "- BTA VAULT ITEMS DO NOT LOAN - 2"],
 ];
 
 
