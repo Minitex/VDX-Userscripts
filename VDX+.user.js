@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.8.4
+// @version     2.8.5
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -132,6 +132,7 @@ var availabilityBad = [
     ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
     ["Bethel Seminary San Diego Library", "- SAN DIEGO LIBRARY DOESN'T LOAN - CODE 6"],
     ["Vault", "- BTA VAULT ITEMS DO NOT LOAN - 2"],
+    ["LUCKY Type", "- LUCKY ITEMS DO NO CIRCULATE - 1"]
 ];
 
 
