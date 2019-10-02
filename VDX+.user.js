@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.8.5
+// @version     2.8.6
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -75,8 +75,6 @@ var dvdLocs = 	[
     ["ALV - Virginia", "- NO FICTION DVDS - 2"],
     ["ALV - Ely", "- DOESN'T LOAN DVDS - 2"],
 
-    ["BTA", "- DOESN'T LOAN DVDS - 2"],
-
     ["MLM - Edgerton", "- DOESN'T LOAN DVDS - 2"],
     ["MLM - Redwood Falls", "- DOESN'T LOAN DVDS - 2"],
     ["MLM - Wabasso", "- DOESN'T LOAN DVDS - 2"],
@@ -101,7 +99,6 @@ var dvdSerLocs	=	[
 ];
 
 var clicCDS = [
-    ["BTA", "- DOESN'T LOAN CDS - 2"],
     ["MNK", "- DOESN'T LOAN CDS - 2"],
     ["MNT", "- DOESN'T LOAN CDS - 2"],
     ["TL#", "- DOESN'T LOAN CDS - 2"],
@@ -144,9 +141,9 @@ var codes = [
     ["Anoka County Library", "Does not lend if another copy is out for ILL","1"],
 
     ["CLIC - Bethel", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
-    ["CLIC - Bethel", "<b>BTA</b> - Items from the <b>Z Room</b> do not circulate.","2"],
-    ["CLIC - Bethel", "<b>MNK</b> - Does not lend Children's books.","2"],
-    ["CLIC - Bethel", "<b>BTA and MNK</b> - Do not lend AV items.","2"],
+    ["CLIC - Bethel", "Items from the <b>Z Room</b> do not circulate.","2"],
+    ["CLIC - Bethel", "Does not lend Children's books.","2"],
+    ["CLIC - Bethel", "Do not lend AV items.","2"],
 
     ["CLIC - Concordia", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
     ["CLIC - Concordia", "Loans any AV if 'Media' is not in the location code.","2"],
