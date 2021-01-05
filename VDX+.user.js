@@ -3,16 +3,16 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.8.6
+// @version     2.8.7
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @author      Kyle Triska
-// @copyright   2019, Kyle Triska
+// @copyright   2021, Kyle Triska
 // @grant 	GM_getResourceText
 // @resource    closingsFile file://H:\Resource Sharing\Kyle\vdxclosings.txt
 // ==/UserScript==
-
+/* globals jQuery, $, waitForKeyElements */
 function handleClosings() {
     var closingsSource = GM_getResourceText("closingsFile");
     if (closingsSource === null) {alert("Cannot find file on H drive! Closings will not display! Tell supervisor!");}
@@ -72,7 +72,7 @@ var dvdLocs = 	[
     ["ALV - Baudette", "- DOESN'T LOAN DVDS - 2"],
     ["ALV - Marble Public", "- DOESN'T LOAN DVDS - 2"],
     ["ALV - Moose Lake", "- DOESN'T LOAN DVDS - 2"],
-    ["ALV - Virginia", "- NO FICTION DVDS - 2"],
+    
     ["ALV - Ely", "- DOESN'T LOAN DVDS - 2"],
 
     ["MLM - Edgerton", "- DOESN'T LOAN DVDS - 2"],
@@ -93,6 +93,7 @@ var dvdLocs = 	[
 ];
 
 var dvdSerLocs	=	[
+    ["ALV - Virginia", "- NO FICTION DVDS - 2"],
     ["S#L - Cannon Falls", "- DOESN'T LOAN DVD SERIES - 2"],
     ["S#L - Pine Island", "- DOESN'T LOAN DVD SERIES - 2"],
     ["S#L - Zumbrota", "- DOESN'T LOAN DVD SERIES - 2"]
