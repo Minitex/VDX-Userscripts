@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.8.8
+// @version     2.8.9
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -196,7 +196,7 @@ var codes = [
     ["Southeastern Libraries Cooperating (SELCO)", "<b>CBBMLL (Chatfield Brass Band Music Lending Library)</b> does not circulate.","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Notify a supervisor if you see a request going to <b>CBBMLL</b>.","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Cannon Falls, Pine Island, and Zumbrota will not loan DVD series.","2"],
-    ["Southeastern Libraries Cooperating (SELCO)", "Catalog Restriction &nbsp; System-wide","2"],
+    ["Southeastern Libraries Cooperating (SELCO)", "Catalog Restriction &amp;nbsp; System-wide","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Catalog Restriction 7 day cko System-wide","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Catalog Restriction 21 day cko System-wide","2"],
 
