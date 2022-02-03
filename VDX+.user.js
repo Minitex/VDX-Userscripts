@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.8.9
+// @version     2.9.0
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -47,7 +47,6 @@ function parseClosingsToArray(txt)
 
 var collections = 	[
     ["Chatfield Music Lending Library", "DOES NOT LOAN - CODE 6"],
-    ["St. Cloud Public Library", "CLOSED INDEFINITELY - CODE 6"],
     ["Bookmobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
     ["Mobile", "BOOKMOBILES DON'T LOAN - CODE 6"],
     ["Floating", "FLOATING DON'T LOAN - CODE 6"],
@@ -62,8 +61,8 @@ var collections = 	[
     ["Community School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
     ["Middle School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
     ["Primary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
-    ["ALV - Hibbing Public Library", "Closed indefinitely - CODE 6"],
     ["Elysian Public Library", "- DOESN'T LOAN - 6"],
+    ["William Kelley School", "- DOESN'T LOAN -6"],
     ["Minneapolis Central", "IGNORE THIS LOCATION"]
 ];
 
@@ -72,7 +71,7 @@ var dvdLocs = 	[
     ["ALV - Baudette", "- DOESN'T LOAN DVDS - 2"],
     ["ALV - Marble Public", "- DOESN'T LOAN DVDS - 2"],
     ["ALV - Moose Lake", "- DOESN'T LOAN DVDS - 2"],
-    
+
     ["ALV - Ely", "- DOESN'T LOAN DVDS - 2"],
 
     ["MLM - Edgerton", "- DOESN'T LOAN DVDS - 2"],
@@ -111,73 +110,54 @@ var videoGames = [
 ];
 
 
-var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "GLCL", "Rotating", "Display", "Bi-Folkal", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Browsing Collection", "Curriculum Resources", "Special", "_Off-site"];
+var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "Rotating", "Display", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Special", "_Off-site", "BIG BOOK"];
 
 
 var availabilityBad = [
     ["STORYTIME", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
     ["ON DISPLAY", "- DISPLAY ITEMS DON'T LOAN - CODE 2"],
     ["WALDORF", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
-    ["MNARCHIVES", "- MNARCHIVES COLLECTION DOESN'T LOAN - CODE 2"],
     ["Reference", "- REFERENCE COLLECTION DOESN'T LOAN - CODE 2"],
     ["Archives", "- Archives COLLECTION DOESN'T LOAN - CODE 2"],
-    ["Ade Bethune", "- ADE BETHUNE COLLECTION DOESN'T LOAN - CODE 2"],
-    ["McHugh", "- McHugh COLLECTION DOESN'T LOAN - CODE 2"],
-    ["Mitsch", "- Mitsch COLLECTION DOESN'T LOAN - CODE 2"],
-    ["Muellerleile", "- Muellerleile COLLECTION DOESN'T LOAN - CODE 2"],
-    ["Sawyer", "- SAWYER COLLECTION DOESN'T LOAN - CODE 2"],
-    ["Slade", "- SLADE COLLECTION DOESN'T LOAN - CODE 2"],
     ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
-    ["Bethel Seminary San Diego Library", "- SAN DIEGO LIBRARY DOESN'T LOAN - CODE 6"],
-    ["Vault", "- BTA VAULT ITEMS DO NOT LOAN - 2"],
+    ["William Kelley School", "- HIGH SCHOOLS DO NOT LOAN - 2"],
     ["LUCKY Type", "- LUCKY ITEMS DO NO CIRCULATE - 1"]
 ];
 
 
 var codes = [
-    ["Arrowhead Library System", "<b>Cloquet</b> does not circulate anything published in the last 6 months.","24"],
-    ["Arrowhead Library System", "Does not lend AV Materials by Bob Dylan.","2"],
+    ["Arrowhead Library System", "Items with NEW in Catalog do not loan.","24"],
+    ["Arrowhead Library System", "MN History Items do not loan.","2"],
+    ["Arrowhead Library System", "Hibbing Public Library does not loan Bob Dylan Collection.","2"],
+    ["Arrowhead Library System", "Aurora Public Library does not loan Storytime bags or Realia items.","2"],
+    ["Arrowhead Library System", "Grand Marais does not loan the Technology Collection.","2"],
+    ["Arrowhead Library System", "Ely does not loan the Science Tools Collection.","2"],
 
     ["Anoka County Library", "Check current year and previous year DVDs in catalog for 'Rental' in Call Number","24"],
     ["Anoka County Library", "Does not lend if another copy is out for ILL","1"],
+    ["Anoka County Library", "Does not lend Board Games","2"],
+    ["Anoka County Library", "Does not lend Cookware","2"],
+    ["Anoka County Library", "Does not lend DIscovery Kits","2"],
+    ["Anoka County Library", "Does not lend Memory Maker Kits","2"],
 
-    ["CLIC - Bethel", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
-    ["CLIC - Bethel", "Items from the <b>Z Room</b> do not circulate.","2"],
-    ["CLIC - Bethel", "Does not lend Children's books.","2"],
-    ["CLIC - Bethel", "Do not lend AV items.","2"],
+    ["Carver County Library", "Do Not Lend Book Club/Book-Club-In-A-Bag Kits including Adult, Teen, Juvenile","2"],
+    ["Carver County Library", "Does not lend Memory-Kits or Memory Maker Kit","2"],
+    ["Carver County Library", "Does not lend Care-Kits or Child Care in a Kit","2"],
+    ["Carver County Library", "Does not lend STEM-Kits or Elementary STEM Kit","2"],
+    ["Carver County Library", "Does not lend Hotspots or Mobile Hotspots","2"],
+    ["Carver County Library", "Does not lend Board Books","2"],
 
-    ["CLIC - Concordia", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
-    ["CLIC - Concordia", "Loans any AV if 'Media' is not in the location code.","2"],
+    ["Dakota County Library", "Does not lend Book Group (Book Club) Kits","24"],
+    ["Dakota County Library", "Does not lend Board Books.","2"],
+    ["Dakota County Library", "Does not lend Launch Pads.","2"],
+    ["Dakota County Library", "Does not lend Microfilm.","2"],
+    ["Dakota County Library", "Does not lend Portable Wifi Hotspots.","2"],
 
-    ["CLIC - Hamline", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
-    ["CLIC - Hamline", "Items from Multi-Volume sets do not circulate.","2"],
-    ["CLIC - Hamline", "Items from the <b>2012-2013 MN Continuing Education Collection</b> do not circulate.","2"],
-    ["CLIC - Hamline", "Childrens Collection does not circulate.","2"],
-    ["CLIC - Hamline", "Loans CDs if 'Media' is not in the location code (but will not lend other AV at all).","2"],
-    ["CLIC - Hamline", "Items owned at <b>MHL</b> should be added to the ROTA as MHA.", " "],
+    ["Great River Regional Library", "Does not lend RR (Reservation Required).","2"],
 
-    ["CLIC - St. Catherine", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
-    ["CLIC - St. Catherine", "<b>SMC</b> - Does not lend 2019 items.","24"],
-    ["CLIC - St. Catherine", "<b>SMC</b> - Does not lend AV items.","2"],
-    ["CLIC - St. Catherine", "<b>MNE</b> - <b>'Browsing Collection'</b> will not circulate","2"],
-    ["CLIC - St. Catherine", "<b>MNE</b> - <b>'Special Collection'</b> will not circulate","2"],
-    ["CLIC - St. Catherine", "<b>MNE</b> - Loans CDs if 'Media' is not in the location code (but will not lend other AV at all).","2"],
-
-    ["CLIC - Northwestern", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
-    ["CLIC - Northwestern", "Loans any AV if 'Media' is not in the location code.","2"],
-
-    ["CLIC - St. Thomas", "<b>Curriculum</b> and <b>Education Collection (Educ Coll)</b> materials do not circulate through ILL.","2"],
-    ["CLIC - St. Thomas", "<b>MNT and TL#</b> - Do not lend AV items.","2"],
-
-    ["Pioneerland Library Systems", "Ortonville will not loan new (current year and previous year) DVDs","24"],
-    ["Pioneerland Library Systems", "Will not circulate audio series 'The story of the world' series by Susan Wise Bauer","2"],
-
-    ["Dakota County Library", "Does not lend recent DVDs. (In Catalog as 'DVDs, Rental')","24"],
-    ["Dakota County Library", "Videocassettes do not circulate.","2"],
-    ["Dakota County Library", "Video Games do not circulate.","2"],
-
-    ["Hennepin County Library", "Children's board books do not circulate.","2"],
+    ["Hennepin County Library", "Children's Board Books do not circulate.","2"],
     ["Hennepin County Library", "Off-site does not loan.","6"],
+    ["Hennepin County Library", "Send to review if MLAC is the only location.","N/A"],
 
     ["Kitchigami Regional Library", "Does not loan current year and previous year items.","24"],
 
@@ -186,8 +166,20 @@ var codes = [
     ["Plum Creek Library System", "<a href=\x22http://opac.plumcreeklibrary.net/cgi-bin/koha/opac-main.pl\x22 target=\x22_blank\x22>Please check catalog for items with '0' availability.</a>"," "],
     ["Plum Creek Library System", "Does not loan current year and previous year items (has 'NEW' in the call number).","24"],
 
-    ["Ramsey County Library", "Professional collection does not circulate.","2"],
-    ["Ramsey County Library", "Video Games do not circulate.","2"],
+    ["Ramsey County Library", "Does not lend Professional Collection.","2"],
+    ["Ramsey County Library", "Does not lend Sotry Bags.","2"],
+    ["Ramsey County Library", "Does not lend Book Club Bags.","2"],
+    ["Ramsey County Library", "Does not lend Stem Kits.","2"],
+    ["Ramsey County Library", "Does not lend Snowshoes.","2"],
+    ["Ramsey County Library", "Does not lend MN State Park Passes.","2"],
+    ["Ramsey County Library", "Does not lend Binge Boxes.","2"],
+    ["Ramsey County Library", "Does not lend Memory Minders.","2"],
+
+    ["Rochester Public Library", "Does not lend Quick Picks and Flicks Collection (QUICKFLK).","2"],
+    ["Rochester Public Library", "Does not lend Book, Palmer Amaranth, Soil Thermometer, or Garden Sieve Kits.","2"],
+    ["Rochester Public Library", "Does not lend Board Games.","2"],
+    ["Rochester Public Library", "Does not lend Telescope.","2"],
+    ["Rochester Public Library", "Does not lend Land Seeds.","2"],
 
     ["Scott County Library System", "<b>Heritage Room</b> items do not circulate.","2"],
 
@@ -195,10 +187,16 @@ var codes = [
     ["Southeastern Libraries Cooperating (SELCO)", "<b>Local Request Only</b>","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "<b>CBBMLL (Chatfield Brass Band Music Lending Library)</b> does not circulate.","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Notify a supervisor if you see a request going to <b>CBBMLL</b>.","2"],
-    ["Southeastern Libraries Cooperating (SELCO)", "Cannon Falls, Pine Island, and Zumbrota will not loan DVD series.","2"],
+    ["Southeastern Libraries Cooperating (SELCO)", "Zumbrota will not loan DVD series.","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Catalog Restriction &amp;nbsp; System-wide","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Catalog Restriction 7 day cko System-wide","2"],
     ["Southeastern Libraries Cooperating (SELCO)", "Catalog Restriction 21 day cko System-wide","2"],
+
+    ["Traverse des Sioux Library", "Martin Luther College Library does not lend Oversize.","2"],
+    ["Traverse des Sioux Library", "Does not lend any Kits.","2"],
+    ["Traverse des Sioux Library", "Does not lend Hotspots.","2"],
+    ["Traverse des Sioux Library", "Does not lend Computers.","2"],
+    ["Traverse des Sioux Library", "Does not lend On Search.","25"],
 
     ["Washington County Library", "Does not lend unless there is more than one copy available.","2"],
 
