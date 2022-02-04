@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.9.0
+// @version     2.9.1
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -161,7 +161,7 @@ var codes = [
 
     ["Kitchigami Regional Library", "Does not loan current year and previous year items.","24"],
 
-    ["Lake Agassiz Regional Library and Northwest Regional Library", "Does not lend current year and previous year items.","24"],
+    ["Lake Agassiz Regional Library and Northwest Regional Library", "Does not lend current year items.","24"],
 
     ["Plum Creek Library System", "<a href=\x22http://opac.plumcreeklibrary.net/cgi-bin/koha/opac-main.pl\x22 target=\x22_blank\x22>Please check catalog for items with '0' availability.</a>"," "],
     ["Plum Creek Library System", "Does not loan current year and previous year items (has 'NEW' in the call number).","24"],
