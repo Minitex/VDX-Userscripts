@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.9.2
+// @version     2.9.3
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -84,8 +84,6 @@ var dvdLocs = 	[
 
     ["TL#", "- DOESN'T LOAN DVDS - 2"],
 
-    ["S#L - Albert Lea", "- DOESN'T LOAN DVDS - 2"],
-
     ["SMC", "- DOESN'T LOAN DVDS - 2"],
 
     ["SSH - Law Library", "- DOESN'T LOAN DVDS - 2"]
@@ -93,8 +91,6 @@ var dvdLocs = 	[
 
 var dvdSerLocs	=	[
     ["ALV - Virginia", "- NO FICTION DVDS - 2"],
-    ["S#L - Cannon Falls", "- DOESN'T LOAN DVD SERIES - 2"],
-    ["S#L - Pine Island", "- DOESN'T LOAN DVD SERIES - 2"],
     ["S#L - Zumbrota", "- DOESN'T LOAN DVD SERIES - 2"]
 ];
 
