@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.9.3
+// @version     2.9.4
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -72,21 +72,7 @@ var dvdLocs = 	[
     ["ALV - Marble Public", "- DOESN'T LOAN DVDS - 2"],
     ["ALV - Moose Lake", "- DOESN'T LOAN DVDS - 2"],
 
-    ["ALV - Ely", "- DOESN'T LOAN DVDS - 2"],
-
-    ["MLM - Edgerton", "- DOESN'T LOAN DVDS - 2"],
-    ["MLM - Redwood Falls", "- DOESN'T LOAN DVDS - 2"],
-    ["MLM - Wabasso", "- DOESN'T LOAN DVDS - 2"],
-
-    ["MNK", "- DOESN'T LOAN DVDS - 2"],
-
-    ["MNT", "- DOESN'T LOAN DVDS - 2"],
-
-    ["TL#", "- DOESN'T LOAN DVDS - 2"],
-
-    ["SMC", "- DOESN'T LOAN DVDS - 2"],
-
-    ["SSH - Law Library", "- DOESN'T LOAN DVDS - 2"]
+    ["ALV - Ely", "- DOESN'T LOAN DVDS - 2"]
 ];
 
 var dvdSerLocs	=	[
@@ -117,7 +103,8 @@ var availabilityBad = [
     ["Archives", "- Archives COLLECTION DOESN'T LOAN - CODE 2"],
     ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
     ["William Kelley School", "- HIGH SCHOOLS DO NOT LOAN - 2"],
-    ["LUCKY Type", "- LUCKY ITEMS DO NO CIRCULATE - 1"]
+    ["LUCKY Type", "- LUCKY ITEMS DO NO CIRCULATE - 1"],
+    ["BOARDBOOK", "- BOARDBOOKS DO NO CIRCULATE - 1"]
 ];
 
 
