@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.9.4
+// @version     2.9.5
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -62,6 +62,8 @@ var collections = 	[
     ["Middle School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
     ["Primary School", "K12 SCHOOLS DON'T LOAN - CODE 6"],
     ["Elysian Public Library", "- DOESN'T LOAN - 6"],
+    ["Waldorf Public Library", "- DOESN'T LOAN - 6"],
+    ["Darfur Public Library", "- DOESN'T LOAN - 6"],
     ["William Kelley School", "- DOESN'T LOAN -6"],
     ["Minneapolis Central", "IGNORE THIS LOCATION"]
 ];
@@ -98,7 +100,9 @@ var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.
 var availabilityBad = [
     ["STORYTIME", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
     ["ON DISPLAY", "- DISPLAY ITEMS DON'T LOAN - CODE 2"],
-    ["WALDORF", "- STORYTIME COLLECTION DOESN'T LOAN - CODE 2"],
+    ["WALDORF", "- WALDORF COLLECTION DOESN'T LOAN - CODE 2"],
+    ["Elysian", "- ELYSIAN COLLECTION DOESN'T LOAN - CODE 2"],
+    ["Darfur", "- DARFUR COLLECTION DOESN'T LOAN - CODE 2"],
     ["Reference", "- REFERENCE COLLECTION DOESN'T LOAN - CODE 2"],
     ["Archives", "- Archives COLLECTION DOESN'T LOAN - CODE 2"],
     ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
