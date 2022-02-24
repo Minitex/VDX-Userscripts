@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.9.5
+// @version     2.9.6
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -94,7 +94,7 @@ var videoGames = [
 ];
 
 
-var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "Rotating", "Rotation", "Display", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Special", "_Off-site", "BIG BOOK"];
+var badCallNumbers = ["Rental", "Reserve", "Reference", "Ref. Collection", "REF.", "New", "Rotating", "Rotation", "Display", "STORYTIME", "PHONO", "ON DISPLAY", "Childrens Collection", "Special", "_Off-site", "BIG BOOK", "Board Bk"];
 
 
 var availabilityBad = [
