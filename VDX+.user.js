@@ -3,7 +3,7 @@
 // @namespace   vdx-plus
 // @description Inserts lending policies into VDX results and adds background colors to alert keywords
 // @include     https://www.mnlinkgateway.org/vdx/zengine*VDXaction*ZSearchDetails*
-// @version     2.9.6
+// @version     2.9.7
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL   https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
 // @downloadURL https://github.com/Minitex/VDX-Userscripts/raw/master/VDX%2B.user.js
@@ -107,6 +107,7 @@ var availabilityBad = [
     ["Archives", "- Archives COLLECTION DOESN'T LOAN - CODE 2"],
     ["LITHUB", "- LITHUB COLLECTION DOESN'T LOAN - CODE 2"],
     ["William Kelley School", "- HIGH SCHOOLS DO NOT LOAN - 2"],
+    ["HERITAGE", "- HERITAGE ITEMS DO NOT LOAN - 2"],
     ["LUCKY Type", "- LUCKY ITEMS DO NO CIRCULATE - 1"],
     ["BOARDBOOK", "- BOARDBOOKS DO NO CIRCULATE - 1"]
 ];
@@ -124,7 +125,7 @@ var codes = [
     ["Anoka County Library", "Does not lend if another copy is out for ILL","1"],
     ["Anoka County Library", "Does not lend Board Games","2"],
     ["Anoka County Library", "Does not lend Cookware","2"],
-    ["Anoka County Library", "Does not lend DIscovery Kits","2"],
+    ["Anoka County Library", "Does not lend Discovery Kits","2"],
     ["Anoka County Library", "Does not lend Memory Maker Kits","2"],
 
     ["Carver County Library", "Do Not Lend Book Club/Book-Club-In-A-Bag Kits including Adult, Teen, Juvenile","2"],
