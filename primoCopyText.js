@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Primo VE Copy Text
 // @namespace    https://minitex.umn.edu/
-// @version      1.0
+// @version      1.0.1
 // @description  An update to Primo made copying text difficult. This adds copy text buttons and disables the click even to collapse when clicked.
 // @author       Kyle Triska
 // @require      https://code.jquery.com/jquery-3.7.0.min.js
@@ -10,6 +10,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=umn.edu
 // @grant        GM_addStyle
 // @grant        GM_setClipboard
+// @update       https://github.com/Minitex/VDX-Userscripts/raw/master/primoCopyText.js
 // ==/UserScript==
 
 waitForKeyElements('p[role="button"][tabindex="0"]', addButton);
