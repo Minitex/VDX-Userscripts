@@ -11,6 +11,7 @@
 // @grant        GM_addStyle
 // @grant        GM_setClipboard
 // @update       https://github.com/Minitex/VDX-Userscripts/raw/master/primoCopyText.js
+// @downloadURL  https://github.com/Minitex/VDX-Userscripts/raw/master/primoCopyText.js
 // ==/UserScript==
 
 waitForKeyElements('p[role="button"][tabindex="0"]', addButton);
