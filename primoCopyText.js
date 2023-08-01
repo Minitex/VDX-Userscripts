@@ -2,7 +2,7 @@
 // @name         Primo VE Copy Text
 // @namespace    https://minitex.umn.edu/
 // @version      1.0.2
-// @description  An update to Primo made copying text difficult. This adds copy text buttons and disables the click even to collapse when clicked.
+// @description  An update to Primo made copying text difficult. This adds copy text buttons and disables the click event to collapse when clicked.
 // @author       Kyle Triska
 // @require      https://code.jquery.com/jquery-3.7.0.min.js
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
