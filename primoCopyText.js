@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Primo VE Copy Text
 // @namespace    https://minitex.umn.edu/
-// @version      1.0.1
+// @version      1.0.2
 // @description  An update to Primo made copying text difficult. This adds copy text buttons and disables the click even to collapse when clicked.
 // @author       Kyle Triska
 // @require      https://code.jquery.com/jquery-3.7.0.min.js
@@ -24,7 +24,8 @@ function addButton(jNode) {
       event.stopPropagation(); // prevent the click event from propagating to parent elements
       var clone = jNode.clone(); // clone the paragraph node
       clone.find('button').remove(); // remove the button from the cloned node
-      var text = clone.text().split(": ")[1]; // extract the text after the ": " from the cloned paragraph text
+      var splitText = clone.text().split(": "); // extract the text after the ": " from the cloned paragraph text
+      var text = splitText.slice(1).join(": "); // join back all parts from the second element onward
       GM_setClipboard(text); // copy the text to the clipboard
     });
     jNode.append(button); // append the button to the paragraph
