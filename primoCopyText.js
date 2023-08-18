@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Primo VE Copy Text
 // @namespace    https://minitex.umn.edu/
-// @version      1.0.2
+// @version      1.0.3
 // @description  An update to Primo made copying text difficult. This adds copy text buttons and disables the click event to collapse when clicked.
 // @author       Kyle Triska
 // @require      https://code.jquery.com/jquery-3.7.0.min.js
@@ -17,7 +17,7 @@ waitForKeyElements('p[role="button"][tabindex="0"]', addButton);
 
 
 function addButton(jNode) {
-  if(jNode.text().startsWith('Barcode: ') || jNode.text().startsWith('Status: ')) {
+  if(jNode.text().startsWith('Barcode: ') || jNode.text().startsWith('Location/Call number: ')) {
     var button = $('<button>').text('Copy Text'); // replace 'Copy Text' with your desired button text
     button.css('margin-left', '5px'); // apply a left margin to the button
     button.click(function(event) {
