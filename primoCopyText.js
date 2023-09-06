@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Primo VE Copy Text
 // @namespace    https://minitex.umn.edu/
-// @version      1.0.5
+// @version      1.1.0
 // @description  An update to Primo made copying text difficult. This adds copy text buttons and disables the click even to collapse when clicked.
 // @author       Kyle Triska
 // @require      https://code.jquery.com/jquery-3.7.0.min.js
@@ -13,33 +13,60 @@
 // @update       https://github.com/Minitex/VDX-Userscripts/raw/master/primoCopyText.js
 // ==/UserScript==
 
-waitForKeyElements('div[ng-if="item.itemFields[3]"] span[role="button"][tabindex="0"], p[role="button"][tabindex="0"]', addButton);
 
-function addButton(jNode) {
-    // Skip if the text starts with "Description:"
-    if (jNode.text().startsWith('Description:')) {
-        return;
-    }
+(function() {
+    'use strict';
 
-    var button = $('<button>').text('Copy Text'); // replace 'Copy Text' with your desired button text
-    button.css('margin-left', '5px'); // apply a left margin to the button
-    button.click(function(event) {
-        event.stopPropagation(); // prevent the click event from propagating to parent elements
+    waitForKeyElements('p[role="button"][tabindex="0"]', addButton);
 
-        var clone = jNode.clone(); // clone the node to avoid modifying the original
-        clone.find('button').remove(); // remove the button from the cloned node
-
-        var textToCopy;
-
-        if (jNode.text().startsWith('Location/Call number: ')) {
-            var splitText = clone.text().split(": ");
-            textToCopy = splitText.slice(1).join(": "); // join back all parts from the second element onward
-        } else if (jNode.closest('div[ng-if="item.itemFields[3]"]').length > 0) {
-            textToCopy = clone.text(); // use the text from the clone that doesn't include the button
+    function addButton(jNode) {
+        // Skip if a button already exists or if the text starts with "Description:"
+        if (jNode.next('button').length > 0 || jNode.text().startsWith('Description:')) {
+            return;
         }
 
-        GM_setClipboard(textToCopy); // copy the text to the clipboard
+        var button = $('<button>').text('Copy Text');
+        button.css({
+            'margin-left': '5px',
+            'display': 'inline-block'   // Set the button's display to inline-block
+        });
+
+        button.click(function(event) {
+            event.stopPropagation();
+
+            var clone = jNode.clone();
+            clone.find('button').remove();
+
+            var textToCopy = jNode.text().startsWith('Location/Call number: ')
+                ? clone.text().split(": ").slice(1).join(": ")
+                : clone.text();
+
+            GM_setClipboard(textToCopy);
+        });
+
+        jNode.after(button);
+
+        // Check if the jNode is a block-level element
+        if (jNode.css('display') === 'block') {
+            jNode.css('display', 'inline-block');
+        }
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.addedNodes) {
+                $(mutation.addedNodes).each(function() {
+                    var node = $(this);
+                    if (node.is('span[role="button"][tabindex="0"][ng-bind-html="item.itemFields[3]"]')) {
+                        addButton(node);
+                    } else if (node.find('span[role="button"][tabindex="0"][ng-bind-html="item.itemFields[3]"]').length > 0) {
+                        addButton(node.find('span[role="button"][tabindex="0"][ng-bind-html="item.itemFields[3]"]'));
+                    }
+                });
+            }
+        });
     });
 
-    jNode.append(button); // append the button directly to jNode
-}
+    observer.observe(document.body, { childList: true, subtree: true });
+
+})();
